@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Faced",
+    "name": "Faced AI Haricuts",
     "slug": "Faced",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.eventsapp.Faced"
     },
     "web": {
       "output": "static",
