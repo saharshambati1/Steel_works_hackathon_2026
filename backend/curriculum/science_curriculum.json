@@ -1,0 +1,248 @@
+{
+    "subject": "science",
+    "description": "Science curriculum for grades 3 through 8, aligned with NGSS standards",
+    "grades": {
+        "3": {
+            "overview": "Third grade science explores life science, weather, and forces through hands-on investigation.",
+            "vocabulary_level": "Use simple scientific terms with clear definitions. Relate concepts to everyday experiences.",
+            "difficulty_guidelines": "Focus on observation and description. Simple cause-effect relationships. Concrete examples only.",
+            "topics": [
+                {
+                    "name": "Life Cycles",
+                    "standards": [
+                        "Describe life cycles of different organisms",
+                        "Compare life cycles of plants and animals",
+                        "Understand that organisms have unique life cycles"
+                    ]
+                },
+                {
+                    "name": "Traits and Inheritance",
+                    "standards": [
+                        "Recognize that organisms inherit traits from parents",
+                        "Understand that some traits are influenced by environment",
+                        "Identify similarities and differences in related organisms"
+                    ]
+                },
+                {
+                    "name": "Weather and Climate",
+                    "standards": [
+                        "Describe weather conditions using data",
+                        "Identify typical weather patterns in different regions",
+                        "Understand that scientists predict weather using patterns"
+                    ]
+                },
+                {
+                    "name": "Forces and Motion",
+                    "standards": [
+                        "Describe patterns of motion",
+                        "Understand that forces cause changes in motion",
+                        "Predict motion based on forces applied"
+                    ]
+                }
+            ]
+        },
+        "4": {
+            "overview": "Fourth grade investigates energy, waves, Earth's features, and how organisms survive in their environments.",
+            "vocabulary_level": "Introduce 'energy', 'wave', 'erosion', 'adaptation'. Build from familiar concepts.",
+            "difficulty_guidelines": "Introduce energy transfers. Pattern recognition in earth and life science. Simple data analysis.",
+            "topics": [
+                {
+                    "name": "Energy Transfer",
+                    "standards": [
+                        "Describe energy transfer between objects",
+                        "Identify different forms of energy",
+                        "Explain energy transformation in simple systems"
+                    ]
+                },
+                {
+                    "name": "Waves and Information",
+                    "standards": [
+                        "Understand waves transfer energy without matter",
+                        "Describe properties of waves using patterns",
+                        "Explain how waves are used to communicate"
+                    ]
+                },
+                {
+                    "name": "Earth's Features",
+                    "standards": [
+                        "Describe patterns in rock formations",
+                        "Understand how wind and water change Earth's surface",
+                        "Identify evidence of past environments from fossils"
+                    ]
+                },
+                {
+                    "name": "Structure and Function in Living Things",
+                    "standards": [
+                        "Describe how internal and external structures support survival",
+                        "Explain how animals use senses to get information",
+                        "Understand plant and animal adaptations"
+                    ]
+                }
+            ]
+        },
+        "5": {
+            "overview": "Fifth grade explores matter, ecosystems, Earth's systems, and the solar system.",
+            "vocabulary_level": "Use 'matter', 'molecule', 'ecosystem', 'orbit'. More abstract concepts introduced.",
+            "difficulty_guidelines": "Particle model of matter. System interactions. Data analysis and modeling.",
+            "topics": [
+                {
+                    "name": "Matter and Its Interactions",
+                    "standards": [
+                        "Describe that matter is made of particles too small to see",
+                        "Measure and graph to identify materials by properties",
+                        "Demonstrate that matter is conserved in chemical reactions"
+                    ]
+                },
+                {
+                    "name": "Energy and Matter",
+                    "standards": [
+                        "Use models to describe energy in food",
+                        "Explain matter cycles through ecosystems",
+                        "Understand that energy flows through ecosystems"
+                    ]
+                },
+                {
+                    "name": "Earth's Systems",
+                    "standards": [
+                        "Describe the water cycle",
+                        "Explain how Earth's major systems interact",
+                        "Describe how communities use science to protect resources"
+                    ]
+                },
+                {
+                    "name": "Space Systems",
+                    "standards": [
+                        "Explain patterns of stars in the night sky",
+                        "Describe Earth's orbit and its effects",
+                        "Explain how gravity affects objects in space"
+                    ]
+                }
+            ]
+        },
+        "6": {
+            "overview": "Sixth grade focuses on cells, body systems, weather patterns, and Earth's history.",
+            "vocabulary_level": "Introduce 'cell', 'organism', 'atmosphere', 'tectonic'. Scientific terminology expected.",
+            "difficulty_guidelines": "Cellular biology introduction. Weather system analysis. Geological time concepts.",
+            "topics": [
+                {
+                    "name": "Cells and Organisms",
+                    "standards": [
+                        "All living things are made of cells",
+                        "Cells carry out functions that support life",
+                        "Organisms are made of cells with specialized functions"
+                    ]
+                },
+                {
+                    "name": "Body Systems",
+                    "standards": [
+                        "Describe how body systems interact",
+                        "Explain how organs work together",
+                        "Understand that the body responds to external factors"
+                    ]
+                },
+                {
+                    "name": "Weather and Climate",
+                    "standards": [
+                        "Explain how unequal heating causes weather patterns",
+                        "Analyze data to predict weather",
+                        "Understand factors that affect regional climate"
+                    ]
+                },
+                {
+                    "name": "Earth's History",
+                    "standards": [
+                        "Interpret rock layers to understand Earth's history",
+                        "Analyze fossil distribution for past environments",
+                        "Understand tectonic processes shape Earth's surface"
+                    ]
+                }
+            ]
+        },
+        "7": {
+            "overview": "Seventh grade examines ecosystems, genetics, chemical reactions, and Earth's resources.",
+            "vocabulary_level": "Use 'gene', 'DNA', 'reaction', 'ecosystem service'. Multi-syllable scientific terms.",
+            "difficulty_guidelines": "Genetic inheritance patterns. Chemical equations basics. System modeling and analysis.",
+            "topics": [
+                {
+                    "name": "Ecosystems",
+                    "standards": [
+                        "Analyze interactions between organisms and environment",
+                        "Explain how matter cycles through ecosystems",
+                        "Evaluate impacts of changes in ecosystems"
+                    ]
+                },
+                {
+                    "name": "Genetics and Heredity",
+                    "standards": [
+                        "Explain how traits are passed from parents to offspring",
+                        "Describe how genetic variations arise",
+                        "Understand environmental factors can affect gene expression"
+                    ]
+                },
+                {
+                    "name": "Chemical Reactions",
+                    "standards": [
+                        "Identify evidence of chemical reactions",
+                        "Explain that atoms are conserved in reactions",
+                        "Analyze factors that affect reaction rates"
+                    ]
+                },
+                {
+                    "name": "Earth's Resources",
+                    "standards": [
+                        "Explain how resources form from geological processes",
+                        "Evaluate impacts of resource extraction",
+                        "Propose solutions for sustainable resource use"
+                    ]
+                }
+            ]
+        },
+        "8": {
+            "overview": "Eighth grade explores forces and motion, energy systems, waves, and evolution.",
+            "vocabulary_level": "Full scientific vocabulary. 'Newton', 'kinetic', 'potential', 'natural selection', 'electromagnetic'.",
+            "difficulty_guidelines": "Newton's laws applications. Energy calculations. Evolution evidence analysis. Wave mathematics.",
+            "topics": [
+                {
+                    "name": "Forces and Motion",
+                    "standards": [
+                        "Apply Newton's laws to predict motion",
+                        "Plan investigations on force and motion relationships",
+                        "Analyze data relating force, mass, and acceleration"
+                    ]
+                },
+                {
+                    "name": "Energy",
+                    "standards": [
+                        "Calculate kinetic energy of moving objects",
+                        "Describe potential energy in various systems",
+                        "Explain energy transformations and conservation"
+                    ]
+                },
+                {
+                    "name": "Waves and Electromagnetic Radiation",
+                    "standards": [
+                        "Use mathematical representations of wave properties",
+                        "Describe electromagnetic spectrum applications",
+                        "Explain wave interactions with matter"
+                    ]
+                },
+                {
+                    "name": "Evolution and Natural Selection",
+                    "standards": [
+                        "Analyze evidence supporting evolution",
+                        "Explain how natural selection leads to adaptation",
+                        "Describe how genetic variation affects survival"
+                    ]
+                },
+                {
+                    "name": "Earth and Human Activity",
+                    "standards": [
+                        "Analyze human impacts on Earth's systems",
+                        "Evaluate solutions for environmental challenges",
+                        "Understand relationships between natural hazards and human activity"
+                    ]
+                }
+            ]
+        }
+    }
+}

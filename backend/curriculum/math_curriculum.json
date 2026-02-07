@@ -1,0 +1,392 @@
+{
+    "subject": "mathematics",
+    "description": "Math curriculum from Kindergarten through Algebra 1",
+    "grades": {
+        "K": {
+            "overview": "Kindergarten mathematics focuses on counting, number recognition, basic shapes, and simple addition concepts.",
+            "vocabulary_level": "Use simple, concrete language. Avoid abstract terms. Use familiar objects for examples.",
+            "difficulty_guidelines": "Problems should use numbers 0-20. Focus on counting and recognition. Use pictures and objects.",
+            "topics": [
+                {
+                    "name": "Counting and Cardinality",
+                    "standards": [
+                        "Count to 100 by ones and tens",
+                        "Count objects and say how many",
+                        "Compare numbers using more than, less than, equal to"
+                    ]
+                },
+                {
+                    "name": "Basic Addition",
+                    "standards": [
+                        "Understand addition as putting together",
+                        "Add within 10 using objects or drawings",
+                        "Solve simple word problems with addition"
+                    ]
+                },
+                {
+                    "name": "Basic Subtraction",
+                    "standards": [
+                        "Understand subtraction as taking away",
+                        "Subtract within 10 using objects",
+                        "Solve simple word problems with subtraction"
+                    ]
+                },
+                {
+                    "name": "Shapes and Geometry",
+                    "standards": [
+                        "Identify circles, squares, triangles, rectangles",
+                        "Describe shapes using informal language",
+                        "Compose simple shapes to form larger shapes"
+                    ]
+                }
+            ]
+        },
+        "1": {
+            "overview": "First grade builds on counting skills to develop addition and subtraction fluency within 20.",
+            "vocabulary_level": "Simple language with introduction of terms like 'sum' and 'difference'.",
+            "difficulty_guidelines": "Problems use numbers 0-100. Focus on single-digit addition/subtraction. Introduce two-digit numbers.",
+            "topics": [
+                {
+                    "name": "Addition and Subtraction",
+                    "standards": [
+                        "Add and subtract within 20 fluently",
+                        "Understand the relationship between addition and subtraction",
+                        "Solve word problems with addition and subtraction"
+                    ]
+                },
+                {
+                    "name": "Place Value",
+                    "standards": [
+                        "Understand tens and ones",
+                        "Compare two-digit numbers",
+                        "Add within 100 using place value understanding"
+                    ]
+                },
+                {
+                    "name": "Measurement",
+                    "standards": [
+                        "Order objects by length",
+                        "Use non-standard units to measure",
+                        "Tell time to the hour and half-hour"
+                    ]
+                }
+            ]
+        },
+        "2": {
+            "overview": "Second grade focuses on multi-digit addition and subtraction, and introduces foundational multiplication concepts.",
+            "vocabulary_level": "Introduce 'equation', 'array', and place value terms. Keep explanations concrete.",
+            "difficulty_guidelines": "Work with numbers to 1000. Multi-digit addition/subtraction with regrouping. Skip counting.",
+            "topics": [
+                {
+                    "name": "Multi-Digit Addition",
+                    "standards": [
+                        "Add within 100 using strategies based on place value",
+                        "Add up to four two-digit numbers",
+                        "Explain why addition strategies work"
+                    ]
+                },
+                {
+                    "name": "Multi-Digit Subtraction",
+                    "standards": [
+                        "Subtract within 100 using strategies",
+                        "Subtract with regrouping",
+                        "Solve one and two-step word problems"
+                    ]
+                },
+                {
+                    "name": "Foundations of Multiplication",
+                    "standards": [
+                        "Work with equal groups of objects",
+                        "Use repeated addition to find totals",
+                        "Understand rectangular arrays"
+                    ]
+                },
+                {
+                    "name": "Measurement and Data",
+                    "standards": [
+                        "Measure length using standard units",
+                        "Represent data on line plots and bar graphs",
+                        "Work with time and money"
+                    ]
+                }
+            ]
+        },
+        "3": {
+            "overview": "Third grade introduces multiplication and division facts, and develops understanding of fractions.",
+            "vocabulary_level": "Use terms like 'factor', 'product', 'quotient', 'numerator', 'denominator'. Provide definitions.",
+            "difficulty_guidelines": "Multiplication and division within 100. Fractions with denominators 2, 3, 4, 6, 8.",
+            "topics": [
+                {
+                    "name": "Multiplication",
+                    "standards": [
+                        "Multiply within 100 fluently",
+                        "Understand multiplication as equal groups",
+                        "Apply properties of multiplication",
+                        "Solve two-step word problems"
+                    ]
+                },
+                {
+                    "name": "Division",
+                    "standards": [
+                        "Divide within 100 fluently",
+                        "Understand division as equal sharing",
+                        "Relate multiplication and division"
+                    ]
+                },
+                {
+                    "name": "Fractions",
+                    "standards": [
+                        "Understand fractions as parts of a whole",
+                        "Represent fractions on number lines",
+                        "Compare fractions with same numerator or denominator",
+                        "Recognize equivalent fractions"
+                    ]
+                }
+            ]
+        },
+        "4": {
+            "overview": "Fourth grade extends understanding of fractions, introduces decimals, and develops multi-digit arithmetic.",
+            "vocabulary_level": "Use mathematical vocabulary freely. Introduce 'equivalent', 'decimal', 'mixed number'.",
+            "difficulty_guidelines": "Multi-digit multiplication. Fractions with unlike denominators. Decimals to hundredths.",
+            "topics": [
+                {
+                    "name": "Multi-Digit Multiplication",
+                    "standards": [
+                        "Multiply a whole number up to four digits by a one-digit number",
+                        "Multiply two two-digit numbers",
+                        "Use area models and standard algorithm"
+                    ]
+                },
+                {
+                    "name": "Multi-Digit Division",
+                    "standards": [
+                        "Divide up to four-digit dividends by one-digit divisors",
+                        "Interpret remainders",
+                        "Use estimation to check reasonableness"
+                    ]
+                },
+                {
+                    "name": "Fractions and Decimals",
+                    "standards": [
+                        "Add and subtract fractions with like denominators",
+                        "Multiply fractions by whole numbers",
+                        "Express fractions as decimals",
+                        "Compare decimals to hundredths"
+                    ]
+                },
+                {
+                    "name": "Factors and Multiples",
+                    "standards": [
+                        "Find factor pairs of whole numbers",
+                        "Identify prime and composite numbers",
+                        "Generate number patterns"
+                    ]
+                }
+            ]
+        },
+        "5": {
+            "overview": "Fifth grade develops fluency with fraction operations and introduces volume and coordinate plane.",
+            "vocabulary_level": "Students should be comfortable with all fraction terminology. Introduce 'volume', 'coordinates'.",
+            "difficulty_guidelines": "All fraction operations. Decimals to thousandths. Introduction to expressions.",
+            "topics": [
+                {
+                    "name": "Fraction Operations",
+                    "standards": [
+                        "Add and subtract fractions with unlike denominators",
+                        "Multiply fractions by fractions",
+                        "Divide unit fractions by whole numbers and vice versa",
+                        "Solve word problems involving fractions"
+                    ]
+                },
+                {
+                    "name": "Decimal Operations",
+                    "standards": [
+                        "Perform all four operations with decimals",
+                        "Round decimals to any place",
+                        "Convert between fractions and decimals"
+                    ]
+                },
+                {
+                    "name": "Expressions and Patterns",
+                    "standards": [
+                        "Write and interpret numerical expressions",
+                        "Use parentheses in expressions",
+                        "Analyze patterns and relationships"
+                    ]
+                },
+                {
+                    "name": "Volume",
+                    "standards": [
+                        "Understand volume as a measure of space",
+                        "Calculate volume of rectangular prisms",
+                        "Apply volume formulas"
+                    ]
+                }
+            ]
+        },
+        "6": {
+            "overview": "Sixth grade transitions to ratios, proportional reasoning, and introduces algebraic expressions.",
+            "vocabulary_level": "Introduce 'ratio', 'rate', 'variable', 'expression', 'equation'. More abstract concepts.",
+            "difficulty_guidelines": "Ratios and unit rates. Positive and negative numbers. One-variable expressions.",
+            "topics": [
+                {
+                    "name": "Ratios and Proportions",
+                    "standards": [
+                        "Understand ratio concepts and use ratio language",
+                        "Find unit rates",
+                        "Solve problems using ratio reasoning"
+                    ]
+                },
+                {
+                    "name": "The Number System",
+                    "standards": [
+                        "Divide fractions by fractions",
+                        "Understand positive and negative numbers",
+                        "Plot points on the coordinate plane"
+                    ]
+                },
+                {
+                    "name": "Expressions and Equations",
+                    "standards": [
+                        "Write and evaluate expressions with variables",
+                        "Identify equivalent expressions",
+                        "Solve one-step equations"
+                    ]
+                },
+                {
+                    "name": "Statistics",
+                    "standards": [
+                        "Recognize statistical questions",
+                        "Calculate mean, median, mode, range",
+                        "Display data using dot plots and histograms"
+                    ]
+                }
+            ]
+        },
+        "7": {
+            "overview": "Seventh grade develops proportional relationships and operations with rational numbers.",
+            "vocabulary_level": "Use 'proportional', 'constant of proportionality', 'rational number'. Abstract reasoning expected.",
+            "difficulty_guidelines": "Operations with negative numbers. Two-step equations. Proportional relationships.",
+            "topics": [
+                {
+                    "name": "Proportional Relationships",
+                    "standards": [
+                        "Compute unit rates with fractions",
+                        "Recognize proportional relationships in tables and graphs",
+                        "Write equations for proportional relationships"
+                    ]
+                },
+                {
+                    "name": "Rational Number Operations",
+                    "standards": [
+                        "Add, subtract, multiply, divide rational numbers",
+                        "Understand properties of operations",
+                        "Solve real-world problems with rational numbers"
+                    ]
+                },
+                {
+                    "name": "Expressions and Equations",
+                    "standards": [
+                        "Rewrite expressions in different forms",
+                        "Solve multi-step equations",
+                        "Solve inequalities"
+                    ]
+                },
+                {
+                    "name": "Geometry",
+                    "standards": [
+                        "Draw and describe geometrical figures",
+                        "Solve problems involving angle measures",
+                        "Understand area and circumference of circles"
+                    ]
+                }
+            ]
+        },
+        "8": {
+            "overview": "Eighth grade introduces linear equations, functions, and foundational geometry concepts for high school.",
+            "vocabulary_level": "Full mathematical vocabulary. 'Function', 'linear', 'slope', 'intercept', 'Pythagorean theorem'.",
+            "difficulty_guidelines": "Systems of equations. Functions and their graphs. Irrational numbers. Pythagorean theorem.",
+            "topics": [
+                {
+                    "name": "Linear Equations",
+                    "standards": [
+                        "Solve linear equations in one variable",
+                        "Solve systems of two linear equations",
+                        "Analyze and solve pairs of simultaneous equations"
+                    ]
+                },
+                {
+                    "name": "Functions",
+                    "standards": [
+                        "Understand that a function assigns exactly one output",
+                        "Compare properties of functions",
+                        "Interpret equations as defining functions"
+                    ]
+                },
+                {
+                    "name": "Geometry",
+                    "standards": [
+                        "Understand congruence and similarity",
+                        "Apply the Pythagorean theorem",
+                        "Solve problems involving volume of cylinders, cones, spheres"
+                    ]
+                },
+                {
+                    "name": "The Number System",
+                    "standards": [
+                        "Know that there are irrational numbers",
+                        "Use rational approximations of irrational numbers",
+                        "Work with radicals and integer exponents"
+                    ]
+                }
+            ]
+        },
+        "Algebra 1": {
+            "overview": "Algebra 1 develops symbolic reasoning, equation solving, and introduces quadratic functions.",
+            "vocabulary_level": "Full algebraic vocabulary. 'Polynomial', 'quadratic', 'exponential', 'domain', 'range'.",
+            "difficulty_guidelines": "Quadratic equations. Polynomial operations. Function analysis. Real-world modeling.",
+            "topics": [
+                {
+                    "name": "Linear Equations and Inequalities",
+                    "standards": [
+                        "Solve linear equations and inequalities",
+                        "Graph linear equations using slope-intercept form",
+                        "Write linear equations from given information"
+                    ]
+                },
+                {
+                    "name": "Systems of Equations",
+                    "standards": [
+                        "Solve systems using substitution and elimination",
+                        "Graph systems and identify solutions",
+                        "Apply to real-world situations"
+                    ]
+                },
+                {
+                    "name": "Polynomials",
+                    "standards": [
+                        "Add, subtract, and multiply polynomials",
+                        "Factor polynomials",
+                        "Understand polynomial identities"
+                    ]
+                },
+                {
+                    "name": "Quadratic Functions",
+                    "standards": [
+                        "Graph quadratic functions",
+                        "Solve quadratic equations by factoring, completing square, quadratic formula",
+                        "Interpret solutions in context"
+                    ]
+                },
+                {
+                    "name": "Exponential Functions",
+                    "standards": [
+                        "Distinguish between linear and exponential growth",
+                        "Write and interpret exponential functions",
+                        "Solve exponential equations"
+                    ]
+                }
+            ]
+        }
+    }
+}
