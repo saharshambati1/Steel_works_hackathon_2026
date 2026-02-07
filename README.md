@@ -2,6 +2,8 @@
 
 An offline-first, cost-efficient learning app designed for rural area learners. Works on iOS, Android, and Desktop devices. Leverages Groq’s large language models for fast PDF generation and offline sharing.
 
+Note: Generated PDFS can be located at [backend/generated_pdfs](backend/generated_pdfs)
+
 ---
 
 ## Table of Contents
