@@ -95,3 +95,7 @@ Scan the QR code shown in the terminal.
 
 - [GitHub Docs](https://docs.github.com/en)
 
+## Architecture Images
+
+![High Level Architecture](Architecture_images/high_level_architecture.png)
+![PDF Generation](Architecture_images/pdf_generation.png)
