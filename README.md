@@ -9,7 +9,7 @@ An offline-first, cost-efficient learning app designed for rural area learners. 
 - [Key Features](#key-features)
 - [Key Technical Features](#key-technical-features)
 - [Helpful Information](#helpful-information)
-- [Screenshot / Image](#architecture-images)
+- [Architecure Images / Image](#architecture-images)
 
 ---
 
