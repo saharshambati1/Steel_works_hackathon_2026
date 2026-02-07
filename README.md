@@ -15,7 +15,14 @@ An offline-first, cost-efficient learning app designed for rural area learners. 
 
 ## How to Run
 
-### 1. Set up Groq API Key
+### 1. Clone the Repository
+
+```
+git clone https://github.com/saharshambati1/Steel_works_hackathon_2026.git
+cd Steel_works_hackathon_2026
+npm install
+```
+### 2. Set up Groq API Key
 1. Go to [Groq](https://groq.com) and create an account.  
 2. Generate an API key.  
 3. Copy your API key.  
@@ -24,13 +31,7 @@ An offline-first, cost-efficient learning app designed for rural area learners. 
 ```env
 GROQ_API_KEY=<Paste your API Key here>
 ```
-### 2. Clone the Repository
 
-```
-git clone https://github.com/saharshambati1/Steel_works_hackathon_2026.git
-cd Steel_works_hackathon_2026
-npm install
-```
 ### 3. Set Your IPV4 Address
 Open terminal and type:
 
