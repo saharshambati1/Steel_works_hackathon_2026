@@ -47,6 +47,7 @@ const API_BASE_URL = 'http://<Paste your IP4 Address here>:8000';
 ### 4. Run the Backend
 ```
 cd backend
+pip install requirements.txt
 python -m uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
