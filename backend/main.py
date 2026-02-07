@@ -47,6 +47,7 @@ class GeneratePDFRequest(BaseModel):
     prompt: str
     subject: str  # "math" or "science"
     grade: str  # e.g., "4", "K", "Algebra 1"
+    language: str = "English"
     include_answers: bool = True
 
 
@@ -132,6 +133,7 @@ async def generate_pdf_endpoint(request: GeneratePDFRequest):
             prompt=request.prompt,
             subject=request.subject.lower(),
             grade=request.grade,
+            language=request.language,
             curriculum_context=curriculum_context
         )
         
@@ -147,14 +149,22 @@ async def generate_pdf_endpoint(request: GeneratePDFRequest):
             content=content,
             subject=request.subject,
             grade=request.grade,
+            language=request.language,
             include_answers=request.include_answers
         )
         
         # Step 4: Save PDF locally
         pdf_id = str(uuid.uuid4())[:8]
+        
+        # Internal title for the PDF metadata (can be Spanish)
         title = content.get("title", f"{request.subject.title()} Worksheet")
-        safe_title = "".join(c for c in title if c.isalnum() or c in (' ', '-', '_')).strip()
-        filename = f"{safe_title}_{pdf_id}.pdf"
+        
+        # Enforce English-only, safe filename
+        # Use request.subject (English enum) and request.grade instead of the potentially Spanish title/content
+        # Format: Subject_Grade_Worksheet_ID.pdf
+        safe_subject = "".join(c for c in request.subject if c.isalnum())
+        safe_grade = "".join(c for c in request.grade if c.isalnum())
+        filename = f"{safe_subject}_Grade{safe_grade}_Worksheet_{pdf_id}.pdf"
         
         filepath = save_pdf(pdf_bytes, filename, PDF_STORAGE_DIR)
         

@@ -12,6 +12,7 @@ export interface GeneratePDFRequest {
     prompt: string;
     subject: 'math' | 'science';
     grade: string;
+    language: 'English' | 'Spanish';
     include_answers?: boolean;
 }
 
@@ -75,6 +76,7 @@ class ApiService {
                     prompt: request.prompt,
                     subject: request.subject,
                     grade: request.grade,
+                    language: request.language,
                     include_answers: request.include_answers ?? true,
                 }),
             });
@@ -182,3 +184,4 @@ export const apiService = new ApiService();
 
 // Export class for custom instances
 export { ApiService };
+

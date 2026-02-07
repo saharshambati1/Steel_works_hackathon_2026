@@ -8,7 +8,6 @@ import { PromptInput } from '@/components/PromptInput';
 import { SubjectSelector } from '@/components/SubjectSelector';
 import { apiService, GeneratePDFResponse } from '@/services/api';
 import { storageService } from '@/services/storage';
-import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import React, { useState } from 'react';
 import {
@@ -27,6 +26,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function CreateScreen() {
   const [subject, setSubject] = useState<'math' | 'science'>('math');
   const [grade, setGrade] = useState('4');
+  const [language, setLanguage] = useState<'English' | 'Spanish'>('English');
   const [prompt, setPrompt] = useState('');
   const [includeAnswers, setIncludeAnswers] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -42,7 +42,12 @@ export default function CreateScreen() {
 
   const handleGenerate = async () => {
     if (!prompt.trim()) {
-      Alert.alert('Missing Prompt', 'Please enter what you would like to learn about.');
+      Alert.alert(
+        language === 'Spanish' ? 'Falta el tema' : 'Missing Prompt',
+        language === 'Spanish'
+          ? 'Por favor escribe qué te gustaría aprender.'
+          : 'Please enter what you would like to learn about.'
+      );
       return;
     }
 
@@ -61,6 +66,7 @@ export default function CreateScreen() {
         prompt: prompt.trim(),
         subject,
         grade,
+        language,
         include_answers: includeAnswers,
       });
 
@@ -148,6 +154,45 @@ export default function CreateScreen() {
             grade={grade}
           />
 
+          {/* Language Selector */}
+          <View style={styles.languageContainer}>
+            <Text style={styles.sectionTitle}>Language / Idioma</Text>
+            <View style={styles.languageSelector}>
+              <TouchableOpacity
+                style={[
+                  styles.languageButton,
+                  language === 'English' && styles.languageButtonActive,
+                ]}
+                onPress={() => setLanguage('English')}
+              >
+                <Text
+                  style={[
+                    styles.languageButtonText,
+                    language === 'English' && styles.languageButtonTextActive,
+                  ]}
+                >
+                  🇺🇸 English
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.languageButton,
+                  language === 'Spanish' && styles.languageButtonActive,
+                ]}
+                onPress={() => setLanguage('Spanish')}
+              >
+                <Text
+                  style={[
+                    styles.languageButtonText,
+                    language === 'Spanish' && styles.languageButtonTextActive,
+                  ]}
+                >
+                  🇪🇸 Español
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
           {/* Options */}
           <View style={styles.optionsContainer}>
             <TouchableOpacity
@@ -172,12 +217,16 @@ export default function CreateScreen() {
             {isGenerating ? (
               <View style={styles.generatingContent}>
                 <ActivityIndicator size="small" color="#FFFFFF" />
-                <Text style={styles.generateButtonText}>Generating PDF...</Text>
+                <Text style={styles.generateButtonText}>
+                  {language === 'Spanish' ? 'Generando PDF...' : 'Generating PDF...'}
+                </Text>
               </View>
             ) : (
               <View style={styles.generatingContent}>
                 <Text style={styles.generateButtonIcon}>✨</Text>
-                <Text style={styles.generateButtonText}>Generate PDF</Text>
+                <Text style={styles.generateButtonText}>
+                  {language === 'Spanish' ? 'Generar PDF' : 'Generate PDF'}
+                </Text>
               </View>
             )}
           </TouchableOpacity>
@@ -195,9 +244,7 @@ export default function CreateScreen() {
 
           {/* Footer Info */}
           <View style={styles.footer}>
-            <Text style={styles.footerText}>
-              📚 Content is age-appropriate and curriculum-aligned
-            </Text>
+
             <Text style={styles.footerText}>
               📡 Share via Bluetooth in the Library tab
             </Text>
@@ -335,5 +382,39 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#6B7280',
     textAlign: 'center',
+  },
+  languageContainer: {
+    marginBottom: 24,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#FFFFFF',
+    marginBottom: 12,
+  },
+  languageSelector: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  languageButton: {
+    flex: 1,
+    backgroundColor: '#1F2937',
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: 'transparent',
+  },
+  languageButtonActive: {
+    borderColor: '#3B82F6',
+    backgroundColor: '#1E3A8A',
+  },
+  languageButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#9CA3AF',
+  },
+  languageButtonTextActive: {
+    color: '#FFFFFF',
   },
 });

@@ -22,6 +22,7 @@ def generate_educational_content(
     prompt: str,
     subject: str,
     grade: str,
+    language: str = "English",
     curriculum_context: str = ""
 ) -> dict:
     """
@@ -31,6 +32,7 @@ def generate_educational_content(
         prompt: User's natural language request
         subject: "math" or "science"
         grade: Grade level (e.g., "4", "K", "Algebra 1")
+        language: Output language ("English" or "Spanish")
         curriculum_context: RAG-retrieved curriculum standards
     
     Returns:
@@ -38,6 +40,8 @@ def generate_educational_content(
     """
     
     system_prompt = f"""You are an expert {subject} educator creating content for grade {grade} students.
+    
+LANGUAGE INSTRUCTION: Generate ALL content in {language}.
 
 CURRICULUM CONTEXT:
 {curriculum_context if curriculum_context else "Use age-appropriate content for the specified grade level."}
@@ -102,9 +106,9 @@ GUIDELINES:
         }
 
 
-def generate_content_stream(prompt: str, subject: str, grade: str, curriculum_context: str = ""):
+def generate_content_stream(prompt: str, subject: str, grade: str, language: str = "English", curriculum_context: str = ""):
     """
     Stream educational content generation (for future use with real-time updates).
     """
     # Placeholder for streaming implementation
-    return generate_educational_content(prompt, subject, grade, curriculum_context)
+    return generate_educational_content(prompt, subject, grade, language, curriculum_context)

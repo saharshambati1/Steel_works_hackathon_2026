@@ -104,7 +104,37 @@ def create_styles():
 
 
 
-def generate_pdf(content: dict, subject: str, grade: str, include_answers: bool = True) -> bytes:
+# Localization dictionary
+LOCALIZATION = {
+    "English": {
+        "concept_explanation": "📖 Concept Explanation",
+        "worked_examples": "✏️ Worked Examples",
+        "practice_questions": "📝 Practice Questions",
+        "answer_key": "🔑 Answer Key",
+        "teacher_reference": "For teacher/tutor reference",
+        "example": "Example",
+        "problem": "Problem",
+        "solution": "Solution",
+        "subject": "Subject",
+        "grade": "Grade",
+        "generated": "Generated"
+    },
+    "Spanish": {
+        "concept_explanation": "📖 Explicación del Concepto",
+        "worked_examples": "✏️ Ejemplos Resueltos",
+        "practice_questions": "📝 Ejercicios de Práctica",
+        "answer_key": "🔑 Hoja de Respuestas",
+        "teacher_reference": "Para referencia del maestro/tutor",
+        "example": "Ejemplo",
+        "problem": "Problema",
+        "solution": "Solución",
+        "subject": "Materia",
+        "grade": "Grado",
+        "generated": "Generado"
+    }
+}
+
+def generate_pdf(content: dict, subject: str, grade: str, language: str = "English", include_answers: bool = True) -> bytes:
     """
     Generate a PDF from structured educational content.
     
@@ -112,11 +142,15 @@ def generate_pdf(content: dict, subject: str, grade: str, include_answers: bool 
         content: Dict with title, explanation, worked_examples, practice_questions, answer_key
         subject: "math" or "science"
         grade: Grade level
+        language: Language for static text ("English" or "Spanish")
         include_answers: Whether to include the answer key
     
     Returns:
         PDF file as bytes
     """
+    # Get localized strings
+    loc = LOCALIZATION.get(language, LOCALIZATION["English"])
+
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(
         buffer,
@@ -136,13 +170,19 @@ def generate_pdf(content: dict, subject: str, grade: str, include_answers: bool 
     
     # Metadata line
     date_str = datetime.now().strftime("%B %d, %Y")
-    meta_text = f"<font color='#6B7280'>Subject: {subject.title()} | Grade: {grade} | Generated: {date_str}</font>"
+    # Translate subject if needed (simple mapping)
+    display_subject = subject.title()
+    if language == "Spanish":
+        if subject.lower() == "math": display_subject = "Matemáticas"
+        elif subject.lower() == "science": display_subject = "Ciencias"
+
+    meta_text = f"<font color='#6B7280'>{loc['subject']}: {display_subject} | {loc['grade']}: {grade} | {loc['generated']}: {date_str}</font>"
     elements.append(Paragraph(meta_text, styles['CustomBodyText']))
     elements.append(Spacer(1, 20))
     
     # Explanation section
     if content.get('explanation'):
-        elements.append(Paragraph("📖 Concept Explanation", styles['SectionHeader']))
+        elements.append(Paragraph(loc['concept_explanation'], styles['SectionHeader']))
         # Split explanation into paragraphs
         explanation = content['explanation']
         for para in explanation.split('\n\n'):
@@ -152,23 +192,23 @@ def generate_pdf(content: dict, subject: str, grade: str, include_answers: bool 
     
     # Worked Examples section
     if content.get('worked_examples'):
-        elements.append(Paragraph("✏️ Worked Examples", styles['SectionHeader']))
+        elements.append(Paragraph(loc['worked_examples'], styles['SectionHeader']))
         for i, example in enumerate(content['worked_examples'], 1):
-            elements.append(Paragraph(f"Example {i}", styles['Subsection']))
+            elements.append(Paragraph(f"{loc['example']} {i}", styles['Subsection']))
             
             problem = example.get('problem', '')
-            elements.append(Paragraph(f"<b>Problem:</b> {problem}", styles['CustomBodyText']))
+            elements.append(Paragraph(f"<b>{loc['problem']}:</b> {problem}", styles['CustomBodyText']))
             
             solution = example.get('solution', '')
             # Format solution with line breaks
             solution_formatted = solution.replace('\n', '<br/>')
-            elements.append(Paragraph(f"<b>Solution:</b><br/>{solution_formatted}", styles['CustomBodyText']))
+            elements.append(Paragraph(f"<b>{loc['solution']}:</b><br/>{solution_formatted}", styles['CustomBodyText']))
             elements.append(Spacer(1, 10))
         elements.append(Spacer(1, 15))
     
     # Practice Questions section
     if content.get('practice_questions'):
-        elements.append(Paragraph("📝 Practice Questions", styles['SectionHeader']))
+        elements.append(Paragraph(loc['practice_questions'], styles['SectionHeader']))
         for i, q in enumerate(content['practice_questions'], 1):
             question = q.get('question', '')
             difficulty = q.get('difficulty', 'medium')
@@ -191,8 +231,8 @@ def generate_pdf(content: dict, subject: str, grade: str, include_answers: bool 
     # Answer Key section (optional, on new page)
     if include_answers and content.get('answer_key'):
         elements.append(PageBreak())
-        elements.append(Paragraph("🔑 Answer Key", styles['SectionHeader']))
-        elements.append(Paragraph("<i>For teacher/tutor reference</i>", styles['Answer']))
+        elements.append(Paragraph(loc['answer_key'], styles['SectionHeader']))
+        elements.append(Paragraph(f"<i>{loc['teacher_reference']}</i>", styles['Answer']))
         elements.append(Spacer(1, 10))
         
         for i, answer in enumerate(content['answer_key'], 1):
